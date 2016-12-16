@@ -1,6 +1,19 @@
 #!/bin/bash
 signal=$2
 
+while getopts ":h" opt; do
+	case $opt in
+		h)
+		  echo "./cull.sh <process_name> [<signal_number>]" >&2
+		  exit 0
+		  ;;
+		\?)
+		  echo "Unknown arg: -$OPTARG" >&2
+		  exit 1
+		  ;;
+	esac
+done
+
 if [ "$#" -gt 2 ]; then
     echo "cull takes at most 2 args"
     exit 1
