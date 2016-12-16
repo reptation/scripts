@@ -2,7 +2,7 @@
 signal=$2
 
 if [ "$#" -gt 2 ]; then
-    echo "rlykill takes at most 2 args"
+    echo "cull takes at most 2 args"
     exit 1
 fi
 
