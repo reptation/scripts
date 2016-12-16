@@ -27,3 +27,4 @@ for p in $(pidof $1); do
 	sudo kill -$signal $p
 done 
 
+exit 0
