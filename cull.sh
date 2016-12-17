@@ -43,7 +43,7 @@ echo "signal ="$signal","$proc
 
 for p in $(pidof $proc); do
 	echo pidof $proc: $p
-	sudo kill -$signal $p
+	kill -$signal $p
 done 
 
 exit 0
