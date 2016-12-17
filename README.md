@@ -1,4 +1,6 @@
 # scripts
 bash scripts for doing various things
 
-cull.sh -> takes process name and signal number for terminating multi-process apps (e.g. chrome)
+cull.sh -> properly closes the google chrome browser (or other process).  
+	   ./cull.sh <process_name> [<signal_number>]
+     with no args cull terminates chrome browser
