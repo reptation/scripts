@@ -1,0 +1,27 @@
+export EDITOR=vim
+# some more ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+alias lh='ls -lh'                                                                         
+alias lathr='ls -lathr'
+alias tailsys='sudo tail -f -n 100 /var/log/syslog'
+alias p3='python3'
+alias vbm='VBoxManage'
+alias v='vim'
+alias mp='mplayer'
+alias pd='puredata'
+alias plp='bash /home/dwelch/scripts/play_podcast.sh'
+alias pmr='python3 manage.py runserver'
+alias wmbr='mplayer -playlist http://wmbr.org/WMBR_live_128.m3u'
+alias wl='wc -l'
+alias sai='sudo apt install'
+alias node='nodejs'
+alias ktru='xplayer http://www.ktru.org/audiometa/listen4I128m3.m3u'
+alias c="cd"
+alias jn='jupyter notebook'
+alias uu="sudo apt update; sudo apt dist-upgrade"
+alias vs='vagrant ssh'
+alias powershell='pwsh'
+HISTSIZE=100000
+HISTFILESIZE=200000
