@@ -16,7 +16,14 @@ alias wmbr='mplayer -playlist http://wmbr.org/WMBR_live_128.m3u'
 alias wl='wc -l'
 alias sai='sudo apt install'
 alias node='nodejs'
+
+#systemd
+alias sss='sudo systemctl status'
+alias ssr='sudo systemctl restart'
+alias ssst='sudo systemctl start'
+alias sssp='sudo systemctl stop'
 alias ktru='xplayer http://www.ktru.org/audiometa/listen4I128m3.m3u'
+
 alias c="cd"
 alias jn='jupyter notebook'
 alias uu="sudo apt update; sudo apt dist-upgrade"
