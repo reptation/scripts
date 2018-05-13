@@ -24,6 +24,12 @@ alias ssst='sudo systemctl start'
 alias sssp='sudo systemctl stop'
 alias ktru='xplayer http://www.ktru.org/audiometa/listen4I128m3.m3u'
 
+#git
+alias gs="git status"
+alias ga="git add"
+alias gca="git commit -am"
+alias gpom="git push origin master"
+
 alias c="cd"
 alias jn='jupyter notebook'
 alias uu="sudo apt update; sudo apt dist-upgrade"
