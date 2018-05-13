@@ -69,6 +69,6 @@ Vagrant.configure("2") do |config|
      cd /home/vagrant
      wget https://raw.githubusercontent.com/reptation/scripts/master/.bash_aliases
      ln -s /vagrant/ vagrant
-     chown vagrant:vagrant .bash_aliases
+     chown vagrant:vagrant .bash_aliases vagrant
    SHELL
 end
