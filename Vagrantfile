@@ -69,6 +69,8 @@ Vagrant.configure("2") do |config|
      cd /home/vagrant
      git clone https://github.com/reptation/scripts.git
      cd scripts
+     git config --global user.email "david@musicalquilt.com"
+     git config --global user.name "reptation"
      cp .bash_aliases .vimrc ../
      cd ../
      ln -s /vagrant/ vagrant
