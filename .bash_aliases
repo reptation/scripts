@@ -3,8 +3,11 @@ export EDITOR=vim
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-alias lh='ls -lh'                                                                         
+alias lh='ls -lh'                                                              
+alias lah='ls -lah'
+alias lath='ls -lath'
 alias lathr='ls -lathr'
+
 alias tailsys='sudo tail -f -n 100 /var/log/syslog'
 alias p3='python3'
 alias vbm='VBoxManage'
@@ -12,26 +15,27 @@ alias v='vim'
 alias mp='mplayer'
 alias pd='puredata'
 alias pmr='python3 manage.py runserver'
-alias wmbr='mplayer -playlist http://wmbr.org/WMBR_live_128.m3u'
 alias wl='wc -l'
 alias sai='sudo apt install'
-alias node='nodejs'
 
 #systemd
 alias sss='sudo systemctl status'
 alias ssr='sudo systemctl restart'
 alias ssst='sudo systemctl start'
 alias sssp='sudo systemctl stop'
+
+# streaming radio 
 alias ktru='xplayer http://www.ktru.org/audiometa/listen4I128m3.m3u'
+alias wmbr='mplayer -playlist http://wmbr.org/WMBR_live_128.m3u'
 
 #git
 alias gs="git status"
 alias ga="git add"
+alias gc="git commit"
 alias gca="git commit -am"
+alias gcm="git commit -m"
 alias gpom="git push origin master"
 alias grv="git remote -v"
-alias gc="git commit"
-alias gcm="git commit -m"
 
 alias c="cd"
 alias jn='jupyter notebook'
