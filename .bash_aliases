@@ -36,6 +36,7 @@ alias gca="git commit -am"
 alias gcm="git commit -m"
 alias gpom="git push origin master"
 alias grv="git remote -v"
+alias gb="git branch"
 
 alias c="cd"
 alias jn='jupyter notebook'
