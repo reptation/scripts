@@ -42,5 +42,12 @@ alias jn='jupyter notebook'
 alias uu="sudo apt update; sudo apt dist-upgrade"
 alias vs='vagrant ssh'
 alias powershell='pwsh'
+
+#rails
+alias r="rails"
+alias s="server"
+alias g="generate"
+alias t="test"
+
 HISTSIZE=100000
 HISTFILESIZE=200000
