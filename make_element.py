@@ -3,7 +3,7 @@
 # take a file of images and wrap html tags around them.
 
 import os
-mylist = os.listdir('/var/www/thekla.me/html/photos/src_back/')
+mylist = os.listdir('/path/to/img/')
 #print(mylist)
 
 mytag_pre = '<a class="test-popup-link" href="src/'
