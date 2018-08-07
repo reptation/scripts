@@ -16,5 +16,7 @@ wget https://raw.githubusercontent.com/reptation/scripts/master/.vimrc
 rm .bashrc
 wget https://raw.githubusercontent.com/reptation/scripts/master/.bashrc
 
-
+sudo apt update
+sudo apt install unzip htop
+sudo apt dist-upgrade
 
