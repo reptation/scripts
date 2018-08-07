@@ -15,6 +15,7 @@ wget https://raw.githubusercontent.com/reptation/scripts/master/.bash_aliases
 wget https://raw.githubusercontent.com/reptation/scripts/master/.vimrc
 rm .bashrc
 wget https://raw.githubusercontent.com/reptation/scripts/master/.bashrc
+chown $USER:$USER ./*
 
 sudo apt update
 sudo apt install unzip htop
