@@ -1,0 +1,4 @@
+
+[need_updates]
+localhost ansible_connection=local
+
