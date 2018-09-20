@@ -51,7 +51,7 @@ alias g="generate"
 alias t="test"
 
 # docker
-alias dpa="docker ps a"
+alias dpa="docker ps -a"
 alias dra="docker rm `docker ps -aq`"
 
 HISTSIZE=100000
