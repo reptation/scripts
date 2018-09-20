@@ -1,4 +1,0 @@
-- hosts: need_updates
-
-  roles:
-    - run_updates
