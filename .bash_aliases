@@ -56,3 +56,14 @@ alias dra="docker rm `docker ps -aq`"
 
 HISTSIZE=100000
 HISTFILESIZE=200000
+alias memfree="free -k | grep Mem | awk -F' ' '{ print $4 }'"
+
+alias icanhaz="sudo apt-get install"
+# infinite history
+if [[ $- = *i* ]]; then [[ -d ~/.logs ]] || mkdir ~/.logs; PROMPT_COMMAND='echo "$(date "+%Y-%m-%d.%H:%M:%S") $(pwd) $(history 1)" >> ~/.logs/bash-history-$(date "+%Y-%m-%d").log'; fi
+
+alias ap="ansible-playbook -vvvv"
+
+alias nocom="grep -v '^$\|^\s*\#'"
+
+
