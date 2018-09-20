@@ -28,7 +28,7 @@ alias sssp='sudo systemctl stop'
 alias ktru='xplayer http://www.ktru.org/audiometa/listen4I128m3.m3u'
 alias wmbr='mplayer -playlist http://wmbr.org/WMBR_live_128.m3u'
 
-#git
+# git
 alias gs="git status"
 alias ga="git add"
 alias gc="git commit"
@@ -44,11 +44,15 @@ alias uu="sudo apt update; sudo apt dist-upgrade"
 alias vs='vagrant ssh'
 alias powershell='pwsh'
 
-#rails
+# rails
 alias r="rails"
 alias s="server"
 alias g="generate"
 alias t="test"
+
+# docker
+alias dpa="docker ps a"
+alias dra="docker rm `docker ps -aq`"
 
 HISTSIZE=100000
 HISTFILESIZE=200000
