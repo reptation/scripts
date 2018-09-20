@@ -52,7 +52,9 @@ alias t="test"
 
 # docker
 alias dpa="docker ps -a"
-alias dra="docker rm `docker ps -aq`"
+alias dpqa="docker ps -qa"
+alias dr="docker rm" 
+#alias dra='docker rm "$(docker ps -aq)"'
 
 HISTSIZE=100000
 HISTFILESIZE=200000
