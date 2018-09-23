@@ -1,23 +1,14 @@
-#!/bin/bash
+#!/bin/sh
 
-
-read -d '' help <<- HERE
-  assumes you are logged onto the new VM.
-  curl https://raw.githubusercontent.com/reptation/scripts/master/remote-setup.sh | sudo bash
-
-HERE
-
-[ $# -gt 0 ] && { echo $help; exit 1; }
-
-echo "$help"
 cd ~/
-wget https://raw.githubusercontent.com/reptation/scripts/master/.bash_aliases
-wget https://raw.githubusercontent.com/reptation/scripts/master/.vimrc
+git clone https://github.com/reptation/scripts.git
+rm ~/.bash_aliases
+cp scripts/.bash_aliases .
+rm .vimrc
+cp scripts/.vimrc .
 rm .bashrc
-wget https://raw.githubusercontent.com/reptation/scripts/master/.bashrc
+cp scripts/.bashrc .
 chown $USER:$USER ./*
 
-sudo apt update
-#sudo apt -y dist-upgrade 
-apt-get update && apt-get upgrade -y && apt-get autoremove && apt-get autoclean
-sudo apt install unzip htop -y
+apt-get update && apt-get dist-upgrade -y && apt-get autoremove && apt-get autoclean
+sudo apt-get -y install unzip htop
