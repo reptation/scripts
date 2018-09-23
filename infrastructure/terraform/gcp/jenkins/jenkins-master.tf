@@ -21,7 +21,13 @@ resource "google_compute_instance" "default" {
    
   network_interface {
     network = "default"
+
+    access_config {
+      // Ephemeral IP
+    }
+
   }
+
 
   metadata {
     foo = "bar"
@@ -35,5 +41,12 @@ resource "google_compute_instance" "default" {
 
   provisioner "remote-exec" {
     inline = [ "curl https://raw.githubusercontent.com/reptation/scripts/master/infrastructure/terraform/gcp/jenkins/jenkins-install.sh | sudo bash", ]
-  }   
+}
+  connection {
+    type     = "ssh"
+#    user     = "${var.jenkins_user}"
+#    agent = true
+  }  
+
+     
 }
