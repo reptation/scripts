@@ -18,6 +18,6 @@ wget https://raw.githubusercontent.com/reptation/scripts/master/.bashrc
 chown $USER:$USER ./*
 
 sudo apt update
-sudo apt install unzip htop -y
-sudo apt dist-upgrade -y
+#sudo apt install unzip htop -y
+sudo apt -y dist-upgrade 
 
