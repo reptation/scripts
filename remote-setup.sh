@@ -10,5 +10,5 @@ rm .bashrc
 cp scripts/.bashrc .
 chown $USER:$USER ./*
 
-apt-get update && apt-get dist-upgrade -y && apt-get autoremove && apt-get autoclean
-sudo apt-get -y install unzip htop
+#apt-get update && apt-get dist-upgrade -y && apt-get autoremove && apt-get autoclean
+#sudo apt-get -y install unzip htop
