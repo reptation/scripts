@@ -19,5 +19,5 @@ chown $USER:$USER ./*
 
 sudo apt update
 #sudo apt install unzip htop -y
-sudo apt -y dist-upgrade 
+sudo apt dist-upgrade -y
 
