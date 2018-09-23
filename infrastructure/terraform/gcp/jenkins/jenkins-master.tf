@@ -34,6 +34,6 @@ resource "google_compute_instance" "default" {
   }
 
   provisioner "remote-exec" {
-    inline = [ "curl https://raw.githubusercontent.com/reptation/scripts/master/infrastructure/terraform/gcp/jenkins-install.sh | sudo bash" ]
+    inline = [ "curl https://raw.githubusercontent.com/reptation/scripts/master/infrastructure/terraform/gcp/jenkins/jenkins-install.sh | sudo bash", ]
   }   
 }
