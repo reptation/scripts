@@ -1,0 +1,14 @@
+---
+- name: run Jenkins in a Docker container
+  docker_container: 
+    name: jenkins-master
+    image: jenkinsci/blueocean
+    volumes:
+      - jenkins-data:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - "8080:8080"
+      - "50000:50000"
+
+#docker run -u root --rm -d -p 8080:8080 -p 50000:50000 -v jenkins-data:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock jenkinsci/blueocean
+

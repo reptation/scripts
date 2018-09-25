@@ -1,0 +1,46 @@
+---
+- name: Install prerequisite packages
+  update_cache: yes
+  apt: 
+    name: "{{ packages }}"
+  vars:
+    packages: 
+      - apt-transport-https 
+      - ca-certificates 
+      - curl 
+      - software-properties-common
+
+- name: install Docker signing key
+  apt_key: 
+    url: https://download.docker.com/linux/ubuntu/gpg
+    state: present
+
+- name: install Docker repos
+  apt_repository:
+    repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable
+    state: present
+    filename: docker-repo
+    update_cache: yes
+
+- name: install docker
+  apt: 
+    name: docker-ce
+    state: present
+
+- name: allow vagrant access to docker
+  user:
+    append: True
+    name: vagrant # TODO parameterize into a variable
+    group: docker
+
+- name: install docker-compose
+  apt: 
+    name: "{{ packages }}"
+  vars: 
+    packages:
+      - docker-compose
+       
+
+#- name: Wait for the server to finish rebooting
+#  sudo: no
+#  local_action: wait_for host="{{ inventory_hostname }}" search_regex=OpenSSH port=2200 ti:meout=300
