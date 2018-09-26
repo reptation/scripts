@@ -54,6 +54,7 @@ alias t="test"
 alias dpa="docker ps -a"
 alias dpqa="docker ps -qa"
 alias dr="docker rm" 
+alias ds="docker stop" 
 #alias dra='docker rm "$(docker ps -aq)"'
 
 HISTSIZE=100000
