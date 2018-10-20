@@ -1,6 +1,6 @@
 provider "google" {
 #  credentials = "${file("creds2.json")}"
-  project     = "kube-farm-216603"
+  project     = "myproject"
 }
 
 resource "google_container_cluster" "primary" {
