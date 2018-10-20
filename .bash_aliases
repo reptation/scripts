@@ -57,6 +57,11 @@ alias dr="docker rm"
 alias ds="docker stop" 
 #alias dra='docker rm "$(docker ps -aq)"'
 
+# kubernetes
+alias kgp="kubectl get pods"
+alias kgd="kubectl get deployments"
+
+
 HISTSIZE=100000
 HISTFILESIZE=200000
 alias memfree="free -k | grep Mem | awk -F' ' '{ print $4 }'"
@@ -66,7 +71,7 @@ alias icanhaz="sudo apt-get install"
 if [[ $- = *i* ]]; then [[ -d ~/.logs ]] || mkdir ~/.logs; PROMPT_COMMAND='echo "$(date "+%Y-%m-%d.%H:%M:%S") $(pwd) $(history 1)" >> ~/.logs/bash-history-$(date "+%Y-%m-%d").log'; fi
 
 alias ap="ansible-playbook -vvvv"
+alias mkx="chmod +x"
 
 alias nocom="grep -v '^$\|^\s*\#'"
-
 
