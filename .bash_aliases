@@ -60,7 +60,7 @@ alias ds="docker stop"
 # kubernetes
 alias kgp="kubectl get pods"
 alias kgd="kubectl get deployments"
-
+alias kl="kubectl logs"
 
 HISTSIZE=100000
 HISTFILESIZE=200000
