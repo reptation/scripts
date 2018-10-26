@@ -1,6 +1,6 @@
 provider "google" {
-#  credentials = "${file("creds2.json")}"
-  project     = "myproject"
+  credentials = "${file("creds2.json")}"
+  project     = "my-demo-project"
 }
 
 resource "google_container_cluster" "primary" {
