@@ -1,5 +1,4 @@
 #!/bin/sh
 
-# Ubuntu 18.04 for newer versions
-sudo apt install docker-compose
+sudo curl -L "https://github.com/docker/compose/releases/download/1.22.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 
