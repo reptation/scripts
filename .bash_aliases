@@ -72,6 +72,10 @@ if [[ $- = *i* ]]; then [[ -d ~/.logs ]] || mkdir ~/.logs; PROMPT_COMMAND='echo 
 
 alias ap="ansible-playbook -vvvv"
 alias mkx="chmod +x"
+alias nn="netstat -nat"
+alias nng="netstat -nat | grep"
+alias hg="history | grep"
+
 
 alias nocom="grep -v '^$\|^\s*\#'"
 
