@@ -4,4 +4,8 @@
 echo username=$GIT_USERNAME
 echo password=$GIT_PASSWORD
 
-# git config credential.helper "/bin/bash ./credential-helper.sh"
+#git config credential.helper "/bin/bash ./git-credential-helper.sh"
+
+#Simpler just to use cache really
+git config credential.helper cache
+
