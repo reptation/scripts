@@ -1,0 +1,26 @@
+#cloud-config
+
+users:
+  - default
+  - name: ubuntu
+    gecos: ubuntu
+    groups: admin, users, adm
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    lock_passwd: true
+    shell: /bin/bash
+    ssh_authorized_keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDaOqKo0dg0V5txOPbejFTegEgkDUhu+rCoz62xDf2lk+GtPKx3YDyr5z33fivMtUb6kUfF0vQBlyFR5F7O0poOREFOUMqMRWuFn8bl8fn8/dhbn0gS0v8mvHQmxzqqtZhOvLaKuw4c6k6Al1uLegRu+sbkqCzEBVvpm4btpTdiPx9CESWnUMJO6/fEErXlwwDTAlQKpulJqJ9g635qvxVrxac9VOEALgreiauMjDuDstY70QZQ8Vrdpr3Jaes5oa+s9yHSltwZeRDvpFK7I36sDgbH1LDd5jrN1atvq8s98FRDnnuzPRC3RthcoqZFRrN6C1T+/njwCyB3l7oeq41HV6N+BhfFJiwJBkLv38+WjzxQqduRulc9PknLcZowVJRIxOFpwOK6H/9CQFfcmwzQ28lKeCoxJK38VL7prsUUNQa9JwMLrOMekKetpIFZYYkK3M9/E3h7cBIt/pKYEiYGoO3WuEvRYf3BGS+gn3gIBJcn2GenYofLnCmCNt0Acekuj/CQBPFg/RIvr/2ePYX8u5zT2wJQICiDZwNNUS+qrf8YhV3nDYiLV/WFb5GTRyQYZKdRPqBteCUqK/p9ZIujYgJFzfSUiaGXoBDDjVXW34WLFt1uUU6uMKFdEn7Nhax8Iq/g8rFhJ3tct9yhFokIy/V0PMci1hrzBV3OQgPxLw== david@bayou
+
+package_update: true
+package_upgrade: true
+packages:
+  - htop
+  - wget
+  - unzip
+  - zip
+  - curl
+
+runcmd:
+  - [ git, clone, "https://github.com/reptation/scripts.git", /home/ubuntu/scripts ]
+  - [ sh, -c, "chown -R ubuntu:ubuntu /home/ubuntu/scripts" ]
+
