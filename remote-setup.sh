@@ -11,4 +11,4 @@ cp scripts/.bashrc .
 chown $USER:$USER ./*
 
 sudo apt-get update && apt-get dist-upgrade -y && apt-get autoremove && apt-get autoclean
-sudo apt-get -y install unzip htop
+sudo apt-get -y install unzip htop httpie
