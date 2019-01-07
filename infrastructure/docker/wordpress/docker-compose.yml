@@ -1,0 +1,35 @@
+# from https://www.linode.com/docs/quick-answers/linux/wordpress-with-docker-compose/
+# had to run 'docker restart <wordpress_container_name> to be able to connect with MySQL
+version: '3.3'
+
+services:
+   wordpress:
+     depends_on:
+       - db
+     image: wordpress:latest
+     volumes:
+       - wordpress_files_2:/var/www/html
+       - ./php.ini:/usr/local/etc/php/custom.d
+     ports:
+       - "8001:80"
+     restart: "no"
+     environment:
+       WORDPRESS_DB_HOST: db:3306       
+       WORDPRESS_DB_USER: wordpress
+       WORDPRESS_DB_PASSWORD: WRDPRESS_PASSWD
+       PHP_INI_SCAN_DIR: "/usr/local/etc/php/custom.d:/usr/local/etc/php/conf.d"    
+
+   db:
+     image: mysql:5.7
+     volumes:
+       - db_data_2:/var/lib/mysql
+     restart: always
+     environment:
+       MYSQL_ROOT_PASSWORD: NEW_PASSWD
+       MYSQL_DATABASE: wordpress
+       MYSQL_USER: wordpress_admin
+       MYSQL_PASSWORD: WRDPRESS_PASSWD
+volumes:
+    wordpress_files_2:
+    db_data_2:
+
