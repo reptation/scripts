@@ -1,0 +1,6 @@
+
+numpy
+torchvision
+scikit-image
+pandas
+tkinter
