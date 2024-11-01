@@ -76,6 +76,11 @@ alias nn="netstat -nat"
 alias nng="netstat -nat | grep"
 alias hg="history | grep"
 
-
 alias nocom="grep -v '^$\|^\s*\#'"
+
+# kubernetes
+alias k='kubectl'
+alias kpfa='kubectl port-forward service/argocd-server -n argocd 8080:443'
+alias kce='k exec -it $(k get pods -n rps | grep kconnect) -n rps -- bash'
+alias kpfg='kubectl port-forward pod/$(kubectl get pods -n monitoring| grep -o "^[^ ]*" | grep grafana) -n monitoring 3000:3000'
 
